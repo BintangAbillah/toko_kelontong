@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'registrasi_page.dart';
+import 'package:toko_kelontong/model/login_model.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -210,8 +212,15 @@ class _LoginPageState extends State<LoginPage> {
                           const Text("Belum punya akun?"),
 
                           TextButton(
+                            
                             onPressed: () {
-                              // Navigator.push(...)
+
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => const RegisterPage(),
+                                ),
+                              );
                             },
 
                             child: const Text(
